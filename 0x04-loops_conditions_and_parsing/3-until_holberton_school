@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This script print 10 times "Holberton School"
+i=0
+until (( i>9 ))
+do
+        echo "Holberton School"
+        i=$(( i+1 ))
+done
