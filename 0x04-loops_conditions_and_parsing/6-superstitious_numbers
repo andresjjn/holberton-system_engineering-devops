@@ -3,20 +3,18 @@
 i=0
 while (( i<20 ))
 do
-        if [ $i -eq 3 ]
-        then
-                echo  $(( i+1 ))
-                echo "bad luck from China" 
-        elif [ $i -eq 8 ] 
-        then
-                echo  $(( i+1 ))
-                echo "bad luck from Japan"
-        elif [ $i -eq 16 ]
-        then
-                echo  $(( i+1 ))
-                echo "bad luck from Italy"
-        else
-                echo  $(( i+1 ))
-        fi
+        case $i in
+                3)      echo  $(( i+1 ))
+                        echo "bad luck from China"
+                ;; 
+                8)      echo  $(( i+1 ))
+                        echo "bad luck from Japan"
+                ;;
+                16)     echo  $(( i+1 ))
+                        echo "bad luck from Italy"
+                ;;
+                *)      echo  $(( i+1 ))
+                ;;
+        esac
         i=$(( i+1 ))
 done
