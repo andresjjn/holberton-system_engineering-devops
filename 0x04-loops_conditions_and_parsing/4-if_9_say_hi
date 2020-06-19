@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#This script print 10 times "Holberton School" and in 9th line print also "Hi"
+i=0
+while (( i<10 ))
+do
+        if [ $i -ne 8 ]
+        then
+                echo "Holberton School"
+        else
+                echo "Holberton School"
+                echo "Hi"
+        fi
+        i=$(( i+1 ))
+done
