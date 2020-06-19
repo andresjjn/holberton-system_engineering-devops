@@ -14,7 +14,7 @@ do
         elif [ $i -eq 16 ]
         then
                 echo  $(( i+1 ))
-                echo "bad luck from Japan"
+                echo "bad luck from Italy"
         else
                 echo  $(( i+1 ))
         fi
