@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#This script print 10 times "Holberton School" and in 9th line print also "Hi"
+i=0
+while (( i<20 ))
+do
+        if [ $i -eq 3 ]
+        then
+                echo  $(( i+1 ))
+                echo "bad luck from China" 
+        elif [ $i -eq 8 ] 
+        then
+                echo  $(( i+1 ))
+                echo "bad luck from Japan"
+        elif [ $i -eq 16 ]
+        then
+                echo  $(( i+1 ))
+                echo "bad luck from Japan"
+        else
+                echo  $(( i+1 ))
+        fi
+        i=$(( i+1 ))
+done
