@@ -1,1 +1,1 @@
-This repository is a projecto to learn about She
+This is an educational project to learn Shell commands and operations.
