@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script print 10 times "Holberton School"
+#This script show a clock starting from hour:0 to hour: 12 and 59 min
 i=0
 j=1
 while (( i<=12 ))

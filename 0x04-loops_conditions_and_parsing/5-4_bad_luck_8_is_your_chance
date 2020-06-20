@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#This script print 10 times "Holberton School" and in 9th line print also "Hi"
+#This script print 10 times "Holberton School" and in 4th line print "bad luck"
+#and "good lock" in 8th line
 i=0
 while (( i<10 ))
 do

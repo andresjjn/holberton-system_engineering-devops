@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#This script print 10 times "Holberton School"
+#This script print all files names in a directory
+#but just after bash in that name
 for i in *
 do
         echo "$i" | cut -d "-" -f2

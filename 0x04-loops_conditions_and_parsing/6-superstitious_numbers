@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script print 10 times "Holberton School" and in 9th line print also "Hi"
+#This script print a count from 1 to 20 with different messeges in some lines
 i=0
 while (( i<20 ))
 do
