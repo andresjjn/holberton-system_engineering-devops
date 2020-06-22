@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Bash script that displays a long list of currently running processes
+ps -H -A u
