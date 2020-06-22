@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Bash script that kill with SIGINT
+pkill -SIGKILL -f 7-highlander
