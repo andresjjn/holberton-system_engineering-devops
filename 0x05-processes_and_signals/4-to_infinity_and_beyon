@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Bash script that displays indefinitely a phrase sentence with sleeps of 2
+while true
+do
+        echo "To infinity and beyond"
+        sleep 2
+done
