@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Bash script that displays PID of bash and self PID
+for i in $(pidof bash)
+do 
+        echo "$i bash"
+done
