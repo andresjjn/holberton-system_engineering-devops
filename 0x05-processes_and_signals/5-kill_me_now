@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Bash script that kill a process by name
+a=$(ps -o pid,args -C bash | awk '/4-to_infinity_and_beyond/ { print $1 }')
+kill -9 "$a"
