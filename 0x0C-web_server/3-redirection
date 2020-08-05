@@ -3,7 +3,7 @@
 sudo apt-get -y update
 sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
-sudo echo 'Holberton School' > /var/www/html/index.nginx-debian.html
+sudo echo 'Holberton School' | /var/www/html/index.nginx-debian.html
 route="/etc/nginx/sites-enabled/default"
 place="\\\tlocation /redirect_me {\n\t\t return 301 https://github.com/andresjjn;\n\t}\n"
 sudo sed -i "30i $place" "$route"
