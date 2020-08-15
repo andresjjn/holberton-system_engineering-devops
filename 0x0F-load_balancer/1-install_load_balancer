@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+FILE=/etc/haproxy/haproxy.cfg
+sudo apt-get -y install software-properties-common 
+sudo add-apt-repository ppa:vbernat/haproxy-2.0 -y
+sudo apt-get update
+sudo apt-get -y install haproxy=2.0.\*
+route="/etc/hosts"
+command="34.74.224.241 1453-web-01\n104.196.38.181 1453-web-02"
+sudo sed -i "2i $command" $route
+if [ ! -f "$FILE" ]; then
+    return;
+fi
+{
+    echo ""
+    echo "frontend main" 
+    echo "        bind *:80"
+    echo "        default_backend haproxy_http"
+    echo ""
+    echo "backend haproxy_http"
+    echo "        balance roundrobin"
+    echo "        mode http"
+    echo "        option forwardfor"
+    echo "        server 1453-web-01 34.74.224.241:80 check"
+    echo "        server 1453-web-02 104.196.38.181:80 check"
+} >> /etc/haproxy/haproxy.cfg
+{
+    echo "ENABLED=1"
+} >> /etc/default/haproxy
+sudo service haproxy restart
