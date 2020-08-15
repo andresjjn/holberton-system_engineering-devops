@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Install and config a load balanced with 2 servers
 FILE=/etc/haproxy/haproxy.cfg
 sudo apt-get -y install software-properties-common 
 sudo add-apt-repository ppa:vbernat/haproxy-2.0 -y
