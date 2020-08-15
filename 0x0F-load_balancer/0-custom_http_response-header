@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Install nginx web server and create a responsive header
+sudo apt-get -y update
+sudo apt-get install -y nginx
+sudo ufw allow 'Nginx HTTP'
+sudo echo 'Holberton School' | sudo tee /var/www/html/index.nginx-debian.html
+route="/etc/nginx/nginx.conf"
+command="\\\tadd_header X-Served-By \$hostname;"
+sudo sed -i "36i $command" $route
+sudo service nginx restart
