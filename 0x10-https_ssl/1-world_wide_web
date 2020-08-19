@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Function that show subdomines info from a web site
 function print_info() {
     if [ ! -z "$2" ]; then
         echo -n "The subdomain $2 ";
