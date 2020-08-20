@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Run whoami like root or other users passed like argument
 if [ "$1" ]; then
-    sudo -u $1 whoami;
+    sudo -u "$1" whoami;
 else
     sudo -u root whoami;
 fi
