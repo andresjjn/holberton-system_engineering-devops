@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Script that Configure web-01 so that its firewall redirects port 8080/TCP to port 80/TCP
+sudo ufw enable
+sudo ufw allow 8080/tcp
+sed -i '1s/^/*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80\nCOMMIT\n/' /etc/ufw/before.rules
+sudo ufw reload
