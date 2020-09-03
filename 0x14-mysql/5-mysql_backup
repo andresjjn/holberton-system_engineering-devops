@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 name=$(date '+%d-%m-%Y')
-if [[ $# -eq 1 ]] ; then
-    mysqldump  -u root --opt -p "$1" --all-databases > backup.sql
-else
-    mysqldump -u root -p --opt --all-databases > backup.sql
-fi
-tar -zcvf "$name.tar.gz" backup.sql
+mysqldump  -u root -p"$1" --all-databases > backup.sql
+tar -czvf "$name.tar.gz" backup.sql
