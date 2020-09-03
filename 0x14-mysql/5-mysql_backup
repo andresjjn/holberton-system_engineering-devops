@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+name=$(date '+%d-%m-%Y')
+if [[ $# -eq 1 ]] ; then
+    mysqldump -hlocalhost -uroot --password="$1" --all-databases > backup.sql
+else
+    mysqldump -hlocalhost -uroot -p --all-databases > backup.sql
+fi
+tar -zcvf "$name.tar.gz" backup.sql
