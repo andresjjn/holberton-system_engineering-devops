@@ -31,6 +31,6 @@ if __name__ == "__main__":
                 task['completed'] = data[dic].get('completed')
                 l.append(task)
             task_end = {}
-            task_end['2'] = l
+            task_end[argv[1]] = l
             with open('{}.json'.format(argv[1]), 'w') as outfile:
                 json.dump(task_end, outfile)
