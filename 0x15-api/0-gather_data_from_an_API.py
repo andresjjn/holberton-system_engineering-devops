@@ -30,4 +30,4 @@ if __name__ == "__main__":
         print('Employee {} is done with tasks({}/{}):'
               .format(name, len(l), taskes))
         for i in l:
-            print("     {}".format(i))
+            print("\t {}".format(i))
