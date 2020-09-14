@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Script that, using this REST API, for a given employee ID, returns
 information about his/her to list progress."""
-from sys import argv
-from urllib import request
 import json
+from sys import argv
 import urllib
+from urllib import request
 
 
 if __name__ == "__main__":
