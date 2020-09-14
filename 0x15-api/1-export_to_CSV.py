@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Script that, using this REST API, for a given employee ID, and
 export data in the CSV format."""
-from sys import argv
-from urllib import request
 import csv
 import json
+from sys import argv
 import urllib
+from urllib import request
 
 
 if __name__ == "__main__":
@@ -24,7 +24,7 @@ if __name__ == "__main__":
             encoding = response.info().get_content_charset('utf8')
             data = json.loads(raw_data.decode(encoding))
             taskes = len(data)
-            with open('2.csv', mode='w') as record:
+            with open('{}.csv'.format(argv[1]), mode='w') as record:
                 record = csv.writer(record, delimiter=',', quotechar='"',
                                     quoting=csv.QUOTE_ALL)
                 for dic in range(0, taskes):
