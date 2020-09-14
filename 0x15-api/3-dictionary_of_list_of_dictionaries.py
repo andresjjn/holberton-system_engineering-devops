@@ -33,7 +33,11 @@ if __name__ == "__main__":
             dics = []
             for task in data:
                 if task.get('userId') is element:
-                    dics.append(task)
+                    dics_2 = {}
+                    dics_2['completed'] = task.get('completed')
+                    dics_2['task'] = task.get('title')
+                    dics_2['username'] = users[element]
+                    dics.append(dics_2)
             users[element] = dics
     with open('todo_all_employees.json', mode='w', encoding='utf-8') as output:
         json.dump(users, output)
