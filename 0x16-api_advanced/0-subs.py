@@ -18,3 +18,6 @@ def number_of_subscribers(subreddit):
     if result is None:
         return 0
     return result
+
+if __name__ == "__main__":
+    number_of_subscribers('programming')
