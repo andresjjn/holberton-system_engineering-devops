@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """This file contain the function number_of_subscribers"""
 import requests
-import json
 
 
 def number_of_subscribers(subreddit):
@@ -11,5 +10,5 @@ def number_of_subscribers(subreddit):
     request = requests.get(url, headers=headers, allow_redirects=False)
 
     if request.status_code == 200:
-        return json.loads(request.text)['data']['subscribers']
+        return request.json()['data']['subscribers']
     return 0
