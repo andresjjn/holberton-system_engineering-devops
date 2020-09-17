@@ -13,7 +13,7 @@ def number_of_subscribers(subreddit):
                     }
     url = 'https://www.reddit.com/'
     request = json.loads(requests.get(url + '/r/' + subreddit + '/about.json',
-                         headers=headers).text)
+                         headers=headers, allow_redirects=False).text)
     result = request.get('data', {}).get('subscribers')
     if result is None:
         return 0
