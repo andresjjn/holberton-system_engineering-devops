@@ -13,7 +13,8 @@ def top_ten(subreddit):
         dic = request.json()['data']['children']
         for i in range(0, 10):
             print(dic[i]['data']['title'])
-    return 0
+    else:
+        print("None")
 
 if __name__ == "__main__":
     top_ten('programing')
